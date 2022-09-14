@@ -1,20 +1,36 @@
 package com.example.dispapeles.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "client")
 public class Client {
 
-    private String typeId;
+    @Id
+    private Integer document;
+    private String typeDocument;
     private String name;
     private String lastName;
     private Integer ago;
     private String phone;
     private String address;
 
-    public String getTypeId() {
-        return typeId;
+    public String getTypeDocument() {
+        return typeDocument;
     }
 
-    public void setTypeId(String typeId) {
-        this.typeId = typeId;
+    public void setTypeDocument(String typeDocument) {
+        this.typeDocument = typeDocument;
+    }
+
+    public Integer getDocument() {
+        return document;
+    }
+
+    public void setDocument(Integer document) {
+        this.document = document;
     }
 
     public String getName() {
