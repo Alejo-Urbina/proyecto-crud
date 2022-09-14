@@ -34,7 +34,6 @@ public class ClientController {
 
         Client clientCurrent = clientService.getId(id);
 
-        clientCurrent.setDocument(client.getDocument());
         clientCurrent.setTypeDocument(client.getTypeDocument());
         clientCurrent.setName(client.getName());
         clientCurrent.setLastName(client.getLastName());

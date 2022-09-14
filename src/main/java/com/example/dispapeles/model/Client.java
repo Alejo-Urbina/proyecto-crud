@@ -1,5 +1,6 @@
 package com.example.dispapeles.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -10,11 +11,17 @@ public class Client {
 
     @Id
     private Integer document;
+
+    @Column(name="type_document")
     private String typeDocument;
+
     private String name;
+
+    @Column(name = "last_name")
     private String lastName;
+
     private Integer ago;
-    private String phone;
+    private Integer phone;
     private String address;
 
     public String getTypeDocument() {
@@ -57,11 +64,11 @@ public class Client {
         this.ago = ago;
     }
 
-    public String getPhone() {
+    public Integer getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
+    public void setPhone(Integer phone) {
         this.phone = phone;
     }
 
